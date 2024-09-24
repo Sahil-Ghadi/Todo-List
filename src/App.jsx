@@ -50,8 +50,8 @@ function App() {
       <div className="title m-3">
         <h1 className='text-2xl'>To-Do-List</h1>
       </div>
-       <div className="addBar bg-slate-300 rounded-full w-3/5 flex border-slate-400 border-2 mb-6">
-        <input placeholder='Add your Task' onChange={handleChange} type="text" name="text" value={todo} className='h-10 w-80 p-3 bg-transparent rounded-full'/>
+       <div className="addBar bg-slate-300 rounded-full w-auto flex justify-between border-slate-400 border-2 mb-6">
+        <input placeholder='Add your Task' onChange={handleChange} type="text" name="text" value={todo} className='h-10 p-3 bg-transparent m-0 rounded-full'/>
         <button onClick={handleAdd} disabled={todo.length<4} className='bg-amber-200 rounded-full w-16 hover:bg-amber-500'>Add+</button>
       </div>
      <div className="todos bg-slate-400 min-h-72 w-11/12  rounded-xl">
