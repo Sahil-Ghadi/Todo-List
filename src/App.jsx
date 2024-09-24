@@ -50,13 +50,13 @@ function App() {
       <div className="title m-3">
         <h1 className='text-2xl'>To-Do-List</h1>
       </div>
-       <div className="addBar bg-slate-300 rounded-full w-3/5 flex justify-between mb-6">
+       <div className="addBar bg-slate-300 rounded-full w-3/5 flex border-slate-400 border-2 mb-6">
         <input placeholder='Add your Task' onChange={handleChange} type="text" name="text" value={todo} className='h-10 w-80 p-3 bg-transparent rounded-full'/>
         <button onClick={handleAdd} disabled={todo.length<4} className='bg-amber-200 rounded-full w-16 hover:bg-amber-500'>Add+</button>
       </div>
      <div className="todos bg-slate-400 min-h-72 w-11/12  rounded-xl">
          {todos.map(item=>{
-          return <div key={item.id} className="todo bg-sky-300 rounded-full flex items-center justify-between m-4 w-4/5">
+          return <div key={item.id} className="todo bg-sky-300 rounded-full flex items-center justify-between m-4 w-auto">
             <div className="textPart flex items-center ">
             <input onChange={(e)=>{handleCheckbox(e,item.id)}} type="checkbox"  className='h-5 w-5 ml-2' checked={item.isCompleted} id={item.id} />
             <p className={item.isCompleted?'ml-2 line-through':'ml-2 '}>{item.todo}</p> 
