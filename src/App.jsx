@@ -20,17 +20,7 @@ function App() {
   setTodos(newTodos)
   }
 
- const handleDelete=(e,id)=>{
-  let newTodos=todos.filter(item=>item.id!==id)
-  setTodos(newTodos)
- }
-
-  const  handleAdd= ()=>{
-    setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }])
-    setTodo("")
-    console.log(todos)
-  }
-
+ API_KEY = "uewhhdjljfkejfiejfjefeijfeifiefe"
   const handleCheckbox=(e,id)=>{
     let index=todos.findIndex(item=>{
       return item.id===id
